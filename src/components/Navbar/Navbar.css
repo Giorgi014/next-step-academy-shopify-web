@@ -1,0 +1,83 @@
+.nav-bar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(255, 255, 255);
+    padding: 0 20px;
+    font-size: 1.3rem;
+    box-shadow: 0px 0px 15px 2px rgb(116, 116, 116);
+}
+.nav-bar .nav-right-side{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 0 20px;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+}
+.nav-bar .nav-right-side li{
+    display: flex;
+    cursor: pointer;
+    position: relative;
+}
+.nav-bar .nav-right-side li .cart-count{
+    position: absolute;
+    top: -10px;
+    left: 10px;
+    font-size: 1rem;
+    background-color: red;
+    color: white;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-bar .nav-right-side li.big-size{
+    font-size: 1.4rem;
+}
+
+.nav-bar .nav-right-side .secondary-color-b{
+    color: rgb(107, 114, 128);
+}
+.nav-bar .nav-right-side .secondary-color{
+    color: rgb(174, 178, 186);
+}
+.nav-bar .nav-right-side .icon-and-text{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.nav-bar .logo{
+    font-size: 2rem;
+}
+.nav-bar .search-place{
+    display: flex;
+    align-items: center;
+}
+.nav-bar .search-place input{
+    width: 400px;
+    height: 35px;
+    margin: 5px 0;
+    padding: 5 15px;
+    font-size: 1.2rem;
+    border: 2px solid rgb(50, 130, 246);
+}
+.nav-bar .search-place button{
+    position: absolute;
+    top: 47px;
+    width: 70px;
+    height: 41px;
+    font-size: 1.7rem;
+    border: none;
+    outline: none;
+    background-color: rgb(50, 130, 246);
+    color: #fff;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}

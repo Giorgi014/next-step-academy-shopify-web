@@ -1,0 +1,9 @@
+.product-layout{
+    width: 98%;
+    margin: 0 auto;
+}
+.product-layout .children{
+    display: grid;
+    grid-template-columns: repeat(4,auto);
+    gap: 25px 0;
+}
