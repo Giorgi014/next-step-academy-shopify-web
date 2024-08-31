@@ -21,6 +21,15 @@
     cursor: pointer;
     position: relative;
 }
+.nav-bar .nav-right-side li a{
+    color: black;
+    text-decoration: none;
+}
+.nav-bar .nav-right-side li a.active{
+    color: rgb(50, 130, 246);
+    border-bottom: 2px solid rgb(50, 130, 246);
+}
+
 .nav-bar .nav-right-side li .cart-count{
     position: absolute;
     top: -10px;
@@ -54,6 +63,10 @@
 }
 .nav-bar .logo{
     font-size: 2rem;
+}
+.nav-bar .logo a{
+    color: black;
+    text-decoration: none;
 }
 .nav-bar .search-place{
     display: flex;
