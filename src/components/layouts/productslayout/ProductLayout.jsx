@@ -1,8 +1,11 @@
+import { ThemeContext } from '../../../context/themecontext/ThemeContext';
+import { useContext } from 'react';
 import './ProductLayout.css'
 
 function ProductLayout({children,layoutTitle}) {
+    const {isDark,setIsDark} = useContext(ThemeContext)
     return ( 
-        <div className='product-layout'>
+        <div className={isDark?'product-layout dark':"product-layout"}>
             <h2>{layoutTitle}</h2>
             <div className='children'>
             {children}
