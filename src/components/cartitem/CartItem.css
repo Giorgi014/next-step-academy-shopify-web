@@ -2,6 +2,10 @@
     width: 310px;
     border: 1px solid rgb(238, 238, 238);
 }
+.cart-item.dark{
+    width: 310px;
+    border: 1px solid rgb(128, 128, 128);
+}
 .cart-item .image-place{
     width: 100%;
     height: 280px;
@@ -14,7 +18,7 @@
     cursor: pointer;
 }
 .cart-item .image-place img:hover{
-    transform: scale(1.2);
+    transform: scale(1.1);
 }
 
 .cart-item .textures{
@@ -22,11 +26,18 @@
     margin: 0 auto;
     padding: 15px 0;
 }
+.cart-item.dark .textures{
+    color: #fff;
+}
+
 .cart-item .textures p{
     margin: 5px 0;
 }
 .cart-item .textures .category{
     color: rgb(107, 114, 128);
+}
+.cart-item.dark .textures .category{
+    color: #fff;
 }
 .cart-item .textures .title{
     font-size: 1.1rem;
