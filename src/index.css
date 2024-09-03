@@ -8,3 +8,6 @@ body{
 .App.dark{
     background-color: rgb(30, 41, 59);
 }
+.App.dark h1{
+    color: #fff;
+}

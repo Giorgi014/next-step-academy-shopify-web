@@ -1,14 +1,16 @@
 import './CartItem.css'
 import product from '../../assets/thumbnail.png'
-
+import {ThemeContext} from "../../context/themecontext/ThemeContext"
+import { useContext } from 'react'
 
 function CartItem({id,image,title,category,price,discountPercentage}) {
-    
+    const {isDark,setIsDark} = useContext(ThemeContext)
+
     let newPrice = price-(price*(discountPercentage/100))
     newPrice = newPrice.toFixed(2)
 
     return ( 
-        <div className='cart-item'>
+        <div className={isDark?'cart-item dark':'cart-item'}>
             <div className='image-place'><img src={image} className='product-img'/></div>
            <div className='textures'>
                  <p className='category'>{category}</p>

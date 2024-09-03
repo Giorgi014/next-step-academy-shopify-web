@@ -2,10 +2,12 @@ import CartItem from '../../cartitem/CartItem';
 import ProductLayout from '../../layouts/productslayout/ProductLayout';
 import './Home.css'
 import { getAllProducts } from "../../helper/api";
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useContext } from 'react';
+import { ThemeContext } from '../../../context/themecontext/ThemeContext';
 
 
 function Home() {
+    const {isDark,setIsDark} = useContext(ThemeContext)
     const[trendigProductList,setTrendingProductList] = useState([])
     const[newArrivalsProductList,setNewArrivalsProductList] = useState([])
     useEffect(()=>{
@@ -14,7 +16,7 @@ function Home() {
       },[])
 
     return ( 
-        <main className='home-page'>
+        <main className={isDark?'home-page dark':'home-page'}>
             <ProductLayout layoutTitle="Trending Products">
                 {
                     trendigProductList.map((el)=>
