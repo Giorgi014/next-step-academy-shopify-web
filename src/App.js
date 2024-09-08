@@ -6,6 +6,8 @@ import {Routes,Route} from 'react-router-dom'
 import Products from "./components/pages/products/Products";
 import { ThemeContext } from "./context/themecontext/ThemeContext";
 import { useContext } from "react";
+import NotFound from "./components/pages/notfound/NotFound";
+import Product from "./components/pages/product/Product";
 
 
 function App() {
@@ -17,6 +19,8 @@ function App() {
          <Route index element={<Home/>}/>
          <Route path="categories" element={<Categories/>}/>
          <Route path="products" element={<Products/>}/>
+         <Route path="product/:productID" element={<Product/>}/>
+         <Route path="*" element={<NotFound/>}/>
         </Routes>
         <Footer/>
      
