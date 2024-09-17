@@ -4,14 +4,17 @@ import './Home.css'
 import { getAllProducts } from "../../helper/api";
 import { useEffect, useState, useContext } from 'react';
 import { ThemeContext } from '../../../context/themecontext/ThemeContext';
-
+import { RingLoader } from "react-spinners";
 
 function Home() {
     const {isDark,setIsDark} = useContext(ThemeContext)
     const[trendigProductList,setTrendingProductList] = useState([])
     const[newArrivalsProductList,setNewArrivalsProductList] = useState([])
+    const[loadingMoment,setLoadingMoment] = useState(false)
     useEffect(()=>{
+        setLoadingMoment(true)
         getAllProducts(8,0).then((data)=>setTrendingProductList(data.products))
+        .finally(()=>setLoadingMoment(false))
         getAllProducts(8,9).then((data)=>setNewArrivalsProductList(data.products))
       },[])
 
@@ -19,7 +22,8 @@ function Home() {
         <main className={isDark?'home-page dark':'home-page'}>
             <ProductLayout layoutTitle="Trending Products">
                 {
-                    trendigProductList.map((el)=>
+                    loadingMoment?<RingLoader size={100} color="#d8d8d8" cssOverride={{left:"50%",transform:"translateX(-50%)",position:"fixed"}}/>
+                    :trendigProductList.map((el)=>
                     <CartItem 
                         id={el.id}
                         key={el.id}

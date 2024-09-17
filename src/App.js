@@ -1,13 +1,7 @@
-import Footer from "./components/Footer/Footer";
-import Navbar from "./components/Navbar/Navbar";
-import Home from "./components/pages/home/Home";
-import Categories from "./components/pages/categories/Categories"
+import {Navbar,Home,Product,Products,Categories,Footer,NotFound} from "./components"
 import {Routes,Route} from 'react-router-dom'
-import Products from "./components/pages/products/Products";
 import { ThemeContext } from "./context/themecontext/ThemeContext";
 import { useContext } from "react";
-import NotFound from "./components/pages/notfound/NotFound";
-import Product from "./components/pages/product/Product";
 
 
 function App() {
