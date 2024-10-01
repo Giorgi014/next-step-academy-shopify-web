@@ -1,0 +1,10 @@
+.category-page{
+    font-size: 1.5rem;
+}
+.category-page.dark .title{
+    color: white;
+}
+.category-page .title{
+    width: 98%;
+    margin: 0 auto;
+}

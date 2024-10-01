@@ -7,9 +7,11 @@ import {NavLink,Link} from "react-router-dom"
 import { ThemeContext } from "../../context/themecontext/ThemeContext";
 import './Navbar.css'
 import { useContext} from "react";
+import { AuthWindowContext } from "context/aouthWindowContext/AouthWindowContext";
 
 function Navbar() {
     const {isDark,setIsDark} = useContext(ThemeContext)
+    const {isWinOpen,setIsWinOpen} = useContext(AuthWindowContext)
     return ( 
         <nav className={isDark?"nav-bar dark":"nav-bar"}>
             <div className="logo">
@@ -24,7 +26,7 @@ function Navbar() {
             <ul className="nav-right-side">
                 <li><NavLink to={"products"}>Products</NavLink></li>
                 <li><NavLink to={"categories"}>Categories</NavLink></li>
-                <li className="icon-and-text"><FaUser className="secondary-color-b" /><span className="secondary-color">Login</span></li>
+                <li className="icon-and-text" onClick={()=>setIsWinOpen(true)}><FaUser className="secondary-color-b" /><span className="secondary-color">Login</span></li>
                 <li className="big-size secondary-color"><AiOutlineShoppingCart /><div className="cart-count">0</div></li>
                 <button className="big-size theme-btn" onClick={()=>setIsDark(!isDark)}>{isDark?<FiSun />:<LuMoon />}</button>
             </ul>
