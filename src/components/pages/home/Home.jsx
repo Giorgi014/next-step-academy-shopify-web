@@ -1,9 +1,9 @@
-import CartItem from '../../cartitem/CartItem';
-import ProductLayout from '../../layouts/productslayout/ProductLayout';
+import CartItem from 'components/cartitem/CartItem';
+import ProductLayout from 'components/layouts/productslayout/ProductLayout';
 import './Home.css'
-import { getAllProducts } from "../../helper/api";
+import { getAllProducts } from "components/helper/api";
 import { useEffect, useState, useContext } from 'react';
-import { ThemeContext } from '../../../context/themecontext/ThemeContext';
+import { ThemeContext } from 'context/themecontext/ThemeContext';
 import { RingLoader } from "react-spinners";
 
 function Home() {
