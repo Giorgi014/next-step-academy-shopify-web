@@ -1,6 +1,6 @@
 import "./Banner.css"
 import BannerImg from "assets/banner.jpg"
-import { BannerContext } from "context/bannerContext/BannerContext";
+import { BannerContext } from "context";
 import { useContext } from "react";
 import { IoCloseSharp } from "react-icons/io5";
 

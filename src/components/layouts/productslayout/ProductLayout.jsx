@@ -1,4 +1,4 @@
-import { ThemeContext } from 'context/themecontext/ThemeContext';
+import { ThemeContext } from 'context';
 import { useContext } from 'react';
 import './ProductLayout.css'
 

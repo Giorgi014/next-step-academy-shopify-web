@@ -1,10 +1,10 @@
 import { useParams } from "react-router-dom";
-import "./Category.css"
 import ProductLayout from "components/layouts/productslayout/ProductLayout";
 import { useContext, useEffect, useState } from "react";
 import { CartItem } from "components";
 import { getProductsByCategory } from "components/helper/api";
-import { ThemeContext } from "context/themecontext/ThemeContext";
+import { ThemeContext } from "context";
+import "./Category.css"
 
 
 function Category() {
