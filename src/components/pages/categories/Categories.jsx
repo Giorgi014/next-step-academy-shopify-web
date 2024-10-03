@@ -1,8 +1,9 @@
 import { useContext, useEffect, useState } from "react";
-import "./Categories.css"
 import { Link } from "react-router-dom";
 import { getAllCategories } from "components/helper/api";
-import { ThemeContext } from "context/themecontext/ThemeContext";
+import { ThemeContext } from "context";
+import "./Categories.css"
+
 
 function Categories() {
     const [categoryList,setCategoryList] = useState([])

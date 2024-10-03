@@ -1,12 +1,9 @@
 import {Navbar,Home,Product,Products,Categories,Footer,NotFound,Category} from "./components"
 import {Routes,Route} from 'react-router-dom'
-import { ThemeContext } from "./context/themecontext/ThemeContext";
 import { useContext } from "react";
 import Banner from "components/banner/Banner";
-import { BannerContext } from "context/bannerContext/BannerContext";
 import LogIn from "components/logIn/LogIn";
-import { AuthWindowContext } from "context/aouthWindowContext/AouthWindowContext";
-
+import { AuthWindowContext,BannerContext,ThemeContext } from "context";
 
 function App() {
   const {isDark,setIsDark} = useContext(ThemeContext)

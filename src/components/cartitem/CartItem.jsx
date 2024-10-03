@@ -1,6 +1,6 @@
 import './CartItem.css'
 import product from 'assets/thumbnail.png'
-import {ThemeContext} from "context/themecontext/ThemeContext"
+import {ThemeContext} from "context"
 import { useContext } from 'react'
 import { Link } from 'react-router-dom'
 

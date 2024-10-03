@@ -3,7 +3,7 @@ import ProductLayout from 'components/layouts/productslayout/ProductLayout';
 import './Home.css'
 import { getAllProducts } from "components/helper/api";
 import { useEffect, useState, useContext } from 'react';
-import { ThemeContext } from 'context/themecontext/ThemeContext';
+import { ThemeContext } from 'context';
 import { RingLoader } from "react-spinners";
 
 function Home() {
