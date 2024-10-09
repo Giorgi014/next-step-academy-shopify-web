@@ -6,15 +6,27 @@ export const AuthContext = createContext();
 
 function AuthContextComponent({ children }) {
   const { userInfo, setUserInfo } = useContext(UserInfoContext);
+  const [ isError, setIsError ] = useState({
+    code:0,
+    text:""
+  });
   const [isAuth, setIsAuth] = useState(
     localStorage.getItem("accessToken") === null ? false : true
   );
   useEffect(() => {
-    localStorage.getItem("accessToken") !== null &&
-      getDataUsingToken(localStorage.getItem("accessToken")).then((data) => {
-        setUserInfo(data);
-      });
-  });
+    getDataUsingToken(localStorage.getItem("accessToken")).then((resp)=>{
+      if(!resp){
+        setIsError({code:401,text:"Expired Token"})
+        localStorage.removeItem("accessToken")
+        setIsAuth(false)
+        console.clear();
+        
+      }else{
+        localStorage.getItem("accessToken") !== null &&
+        setUserInfo(resp)
+      }
+    })
+  },{});
   useEffect(() => {
     !isAuth && localStorage.removeItem("accessToken");
   }, [isAuth]);
